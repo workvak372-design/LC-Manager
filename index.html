@@ -3085,7 +3085,7 @@
     const sortMode = document.getElementById('empSort').value || 'name';
     const list = document.getElementById('empList');
     const today = todayISO();
-    const filtered = monthEmployees.filter(e =>
+    const filtered = employees.filter(e =>
       !q || e.name.toLowerCase().includes(q) || (e.phone||'').includes(q)
     ).sort((a,b) => {
       if(sortMode === 'added') return (b.joinDate||'').localeCompare(a.joinDate||'');
